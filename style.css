@@ -1,0 +1,32 @@
+/* O asterisco (*) seleciona todos os elementos da página para resetar as margens padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuramos o corpo da página para ocupar 100% da tela e esconder barras de rolagem */
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* Fundo preto caso o vídeo demore a carregar */
+    overflow: hidden; /* Oculta barras de rolagem (scroll) */
+}
+
+/* Selecionamos a tag video para esticá-la */
+video {
+    width: 100vw; /* 100% da largura da janela (viewport width) */
+    height: 100vh; /* 100% da altura da janela (viewport height) */
+    
+    /* 
+      object-fit: cover; garante que o vídeo cubra toda a tela.
+      Se a tela for de um formato diferente do vídeo, ele dará um zoom automático 
+      para não deixar bordas pretas (cortando um pouco as beiradas, se necessário).
+    */
+    object-fit: cover; 
+    
+    /* Posicionamento fixo no topo esquerdo para não ser afetado por outros elementos */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
